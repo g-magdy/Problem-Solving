@@ -22,3 +22,7 @@ I only need to know if the number of divisors is odd or even
 //cout << "SQRT of " << numbers[i] << " is " << s << endl;
 //cout << "calc = " << abs(numbers[i] - s * s) << endl;
 if (s - int(s) == 0) // has a square root -> odd number of divisors
+
+### ad-hock
+It is better no to mimic the exact behaviour explained in the problem
+But to try and understand the pattern and reach the end goal faster.

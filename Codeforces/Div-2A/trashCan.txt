@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+struct card
+{
+    int value;
+    int card_index;
+};
+
+int main()
+{
+    int n_cards;
+    int total_sum = 0;
+    cin >> n_cards;
+    card *cards = new card[n_cards];
+    for (int i = 0; i < n_cards; i++)
+    {
+        int c;
+        cin >> c;
+        cards[i].card_index = i + 1;
+        cards[i].value = c;
+        total_sum += c;
+    }
+    if (n_cards == 2)
+    {
+        cout << "1 2";
+        return 0;
+    }
+    int player = (total_sum / n_cards) * 2;
+    int n_players = n_cards / 2;
+    for (int i = 0; i < n_players; i++)
+    {
+        card c1 = cards[n_cards - 1];
+        cout << c1.card_index << ' ';
+        n_cards--;
+        // find - print index - remove - a card of value player - c1.value
+        for (int i = 0; i < n_cards; i++)
+        {
+            if(cards[i].value == player - c1.value)
+            {
+                cout << cards[i].card_index << endl;
+                cards[i] = cards[n_cards - 1];
+                n_cards--;
+                break;
+            }
+        }
+    }
+    delete[] cards;
+    return 0;
+}
