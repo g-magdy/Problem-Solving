@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Git-hub/Problem-Solving",
-      "program": "d:/Git-hub/Problem-Solving/build/Debug/outDebug",
+      "cwd": "d:/Git-hub/Problem-Solving/Codeforces/Div-2A",
+      "program": "d:/Git-hub/Problem-Solving/Codeforces/Div-2A/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
